@@ -24,14 +24,14 @@ header {
   }
   img {
     position: relative;
-    right: 7%;
+    right: 5%;
     top: 2%;
     height: 32px;
   }
 }
 
 ul {
-  margin: 1.8rem 0 0rem 0rem;
+  margin: 1.4rem 0 0 0.8rem;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -40,6 +40,7 @@ ul {
   gap: 1rem;
   font-weight: 700;
   li {
+    margin: 0;
     ul {
       li {
         padding: 0;
