@@ -9,6 +9,8 @@ $color-primary: #e1e1e6;
 body {
   background-color: $base-color;
   color: $color-primary;
+  max-width: 100vw;
+  width: 100vw;
 }
 
 header {
@@ -25,5 +27,27 @@ header {
     right: 7%;
     top: 2%;
     height: 32px;
+  }
+}
+
+ul {
+  margin: 1.8rem 0 0rem 0rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-weight: 700;
+  li {
+    ul {
+      li {
+        padding: 0;
+        img {
+          width: 55vw;
+          border-radius: 8px;
+        }
+      }
+    }
   }
 }
