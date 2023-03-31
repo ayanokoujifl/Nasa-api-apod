@@ -5,7 +5,9 @@
 }
 
 body {
-  background-color: #3f3f3f;
+  background-color: #bbb7b7;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 nav {
@@ -66,4 +68,33 @@ i.ph-magnifying-glass {
 
 input:focus {
   outline: none;
+}
+
+.image-title {
+  color: #e1e1e6;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: center;
+  gap: 32px;
+}
+.images-container .image-wrapper {
+  margin: 1rem 0;
+}
+.images-container .image-wrapper h4 {
+  margin: 0.5rem 0;
+  color: #1f1e1e;
+}
+.images-container .image-wrapper .image {
+  width: 95%;
+  height: 95%;
+  max-width: 45vw;
+  border-radius: 4px;
+  outline: 2px solid #003363;
+}
+.images-container .image-wrapper .image:hover {
+  outline: 2px solid #fff;
 }/*# sourceMappingURL=style.css.map */
