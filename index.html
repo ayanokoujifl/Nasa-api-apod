@@ -1,18 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <title>Nasa</title>
 
     <link rel="stylesheet" href="style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
-    <header>
-      <div class="container">
-
-      </div>
+    <div class="container">
+      <nav>
+        <img src="./icons/planeta.png" alt="" />
+        <h1 id="title">Explore NASA images</h1>
+        <ul>
+          <li class="parent-input-wrapper">
+            <div class="input-wrapper">
+              <input type="text" placeholder="Pesquise" id="search" />
+              <i class="ph-fill ph-magnifying-glass" onclick="search()"></i>
+            </div>
+          </li>
+          <li><a href="./apod.html">Página de imagens aleatórias</a></li>
+        </ul>
+      </nav>
+    </div>
   </body>
 </html>
