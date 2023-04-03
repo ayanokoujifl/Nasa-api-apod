@@ -17,7 +17,7 @@ async function loadRandom() {
         <img src="${item.url}" />
         `)
           : (li.innerHTML = `
-        <h6>${item.title}</h6>
+        <h3>${item.title}</h3>
         <video src="${item.url} autoplay controls" />
         `);
         ul.appendChild(li);
