@@ -1,36 +1,31 @@
-window.onload = async () => {
-  const ul = document.querySelector('ul')
+const ul = document.querySelector("ul");
+const searched = document.querySelector("#search");
+const main = document.querySelector("main");
 
+const search = async () => {
+  main.innerHTML = "";
+  console.log(searched.value);
   await fetch(
-    'https://api.nasa.gov/planetary/apod?api_key=6gYWbMRm24fo2nVDui7SbjcSDPEljqcTlSlxDe2f&count=10&hd=true&thumbs=true'
+    `https://images-api.nasa.gov/search?q=${searched.value}&media_type=image`
   )
     .then((response) => response.json())
     .then((data) => {
-      data.map((item) => {
-        const li = document.createElement('li')
-        li.classList.add('primary')
-        li.innerHTML = `
-        ${item.title}
-        <ul class="sub-list">
-        <li>
-          <img src="${item.hdurl ? item.hdurl : item.url}" alt="${
-          item.explanation
-        }" />
-        </li>
-        </ul>
-        `
-        ul.appendChild(li)
-      })
-    })
-
-  let i = 0
-  let lis = document.querySelectorAll('.primary')
-  let subLists = document.querySelectorAll('.sub-list')
-  lis.forEach((li) => {
-    li = lis[i]
-    li.addEventListener('click', () => {
-      let subLists = document.querySelectorAll('.sub-list')
-    })
-    i += 1
-  })
-}
+      const items = [];
+      items.push(data.collection.items);
+      var item = items[0];
+      item.map((item) => {
+        const links = item.links;
+        links.map((link) => {
+          const div = document.createElement("div");
+          div.classList.add("image-wrapper");
+          let title = item.data[0].title;
+          div.innerHTML = `
+          <h4 class="image-title">${title}</h4>
+          <img src=${link.href} alt="" class="image" onclick="showOrHide(this)" />
+          <p class="description" onclick="showOrHide(this)" >${item.data[0].description}</p>
+          `;
+          main.appendChild(div);
+        });
+      });
+    });
+};

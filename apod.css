@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Alkatra", cursive;
+}
+
+body {
+  background-color: #42596b;
+  color: #e1efe1;
+}
+
+h2 {
+  margin: 2rem 0;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 2rem;
+}
+
+::selection {
+  color: blue;
+  background-color: #e1efe1;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-left: 2rem;
+  list-style: none;
+}
+
+ul li {
+  width: 50%;
+}
+
+ul li img {
+  width: 80%;
+}
