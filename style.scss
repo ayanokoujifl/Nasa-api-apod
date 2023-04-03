@@ -4,10 +4,11 @@ $color-primary: #e1e1e6;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
-  background-color: #bbb7b7;
+  background-color: #e7f4ff;
   max-width: 100vw;
   overflow-x: hidden;
 }
@@ -24,9 +25,10 @@ nav {
     align-items: center;
   }
   #title {
-    color: #0a72d3;
+    color: #004e97;
     text-align: center;
     padding-left: 10rem;
+    text-transform: capitalize;
   }
 }
 
@@ -73,26 +75,63 @@ input:focus {
 }
 
 .images-container {
+  position: absolute;
   display: flex;
   flex-wrap: wrap;
   width: 100vw;
+  height: 100%;
   justify-content: center;
   gap: 32px;
   .image-wrapper {
     margin: 1rem 0;
+    position: relative;
+    width: 40%;
+    height: 50%;
     h4 {
       margin: 0.5rem 0;
       color: #1f1e1e;
     }
     .image {
+      position: absolute;
       width: 95%;
       height: 95%;
       max-width: 45vw;
       border-radius: 4px;
       outline: 2px solid #003363;
+      z-index: 999999;
+      display: flex;
     }
     .image:hover {
       outline: 2px solid #fff;
     }
   }
+}
+
+.description {
+  top: 2.1rem;
+  color: #000;
+  background-color: #ffffffb0;
+  height: 90%;
+  width: 90%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 999999;
+  margin: auto;
+}
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0052cc;
+  background-image: url("./icons/moon-stars-fill.svg");
+  background-size: 1.5rem;
+  background-position-x: -2px;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #5f9fff;
+  border-radius: 6px;
 }
